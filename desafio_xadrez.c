@@ -5,6 +5,7 @@
     - Torre: 5 casas para a direita (usando for)
     - Bispo: 5 casas na diagonal para cima e à direita (usando while)
     - Rainha: 8 casas para a esquerda (usando do-while)
+    - Cavalo: 2 casas para baixo e 1 para a esquerda (usando loops aninhados)
 */
 
 int main() {
@@ -32,6 +33,22 @@ int main() {
         printf("Esquerda\n");
         contador_rainha++;
     } while (contador_rainha <= casas_rainha);
+
+    // Movimento do Cavalo: 2 casas para baixo e 1 para a esquerda (loops aninhados)
+    // Usando for para as casas para baixo e while para a casa à esquerda
+    int casas_baixo = 2;
+    int casas_esquerda = 1;
+    printf("\nMovimento do Cavalo:\n");
+    // Loop externo: movimento para baixo
+    for (int i = 1; i <= casas_baixo; i++) {
+        printf("Baixo\n");
+    }
+    // Loop interno: movimento para a esquerda
+    int j = 1;
+    while (j <= casas_esquerda) {
+        printf("Esquerda\n");
+        j++;
+    }
 
     return 0;
 }
